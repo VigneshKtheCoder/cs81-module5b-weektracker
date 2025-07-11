@@ -7,3 +7,10 @@ const myWeek = [
   { day: "Saturday", activity: "Texting", category: "social", hoursSpent: 2.5, enjoyment: 10, timeOfDay: "morning" },
   { day: "Sunday", activity: "Reading", category: "creative", hoursSpent: 1.2, enjoyment: 7, timeOfDay: "afternoon" }
 ];
+
+/* 
+1. The activity with the highest enjoyment is gaming because I love to play videogames to cure boredom. 
+2. The dominant category is creative because I like to be creative during my free time. 
+3. Time of day patterns: I tend to like evenings more than the rest since I am most free during the evening. 
+*/
+
