@@ -14,3 +14,23 @@ const myWeek = [
 3. Time of day patterns: I tend to like evenings more than the rest since I am most free during the evening. 
 */
 
+// First Function counts the total number of time spent on physical activities 
+function physicalhours(data) {
+  return data
+    .filter(entry => entry.category === "physical")
+    .reduce((sum, entry) => sum + entry.hoursSpent, 0);
+}
+
+// Second function is the avg enjoyment for the activites done in the evening
+function avgeveningenjoyment(data) {
+  const eveningActivities=data.filter(entry => entry.timeOfDay==="evening");
+  const totalEnjoyment=eveningActivities.reduce((sum, entry) => sum + entry.enjoyment, 0);
+  return eveningActivities.length ? (totalEnjoyment / eveningActivities.length).toFixed(1):0;
+}
+
+
+//High order function (custom)
+function filterByCondition(testFn) {
+  return myWeek.filter(testFn);
+}
+filterByCondition(act => act.hoursSpent < 1.5 && act.enjoyment > 8);
